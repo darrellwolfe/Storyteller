@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section class="intro">
+  <h2>Welcome</h2>
+  <p>This is a minimal blog scaffold. Posts live in <code>_posts/</code>. Click a post below to read it.</p>
+</section>
+
+<section class="posts">
+  <h2>Recent Posts</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <article>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

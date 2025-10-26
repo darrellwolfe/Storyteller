@@ -1,0 +1,12 @@
+title: Storyteller
+email: ''
+description: >
+  A minimal blog scaffold powered by Jekyll.
+baseurl: ""
+url: ""
+theme: minima
+plugins:
+  - jekyll-feed
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+collections: {}
